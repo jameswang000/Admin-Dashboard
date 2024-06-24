@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/*
+8. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+html { 
+    width : 100vw;
+    height : 100vh;
+}
+
+body {
+    width : 100%;
+    height : 100%;
+}
+
+.dashboard-container {
+    width : 100%;
+    height : 100%;
+    display : grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
+}
+
+.sidebar-container {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    background-color: #1992d4;
+    display : grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: 1fr;
+    row-gap: 1px;
+    padding: 10px;
+}
+
+.sidebar-heading { 
+    color : white;
+    grid-row: 1 / span 2;
+    font-family: "Roboto";
+    font-size : 20px;
+    font-weight: bold;
+    display : flex;
+    justify-content: flex-start;
+    column-gap: 10px;
+    align-items: center;
+    align-content: flex-start;
+    align-self: start;
+}
+
+.sidebar-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-item { 
+    color : white;
+    font-size : 14px;
+    font-family: "Roboto";
+    font-weight: bold;
+    display : flex;
+    justify-content: flex-start;
+    grid-row-end: span 1;
+    column-gap: 5px;
+    align-items: baseline;
+    align-self: center;
+    height: 80%;
+}
+
+.heading-container {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    background-color: white;
+}
+
+.body-container { 
+    grid-row: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #e2e8f0;
+}
+
+p, h1 {
+    font : inherit;
+}
+
+svg.sidebar-icon {
+    height: 14px;
+    width: 30px;
+    fill : white;   
+}
+
+svg.sidebar-heading-icon {
+    height: 30px;
+    width: 30px;
+    fill : white;   
+}
+
+
+
+
